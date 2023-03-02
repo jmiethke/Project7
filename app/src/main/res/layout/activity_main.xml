@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_Greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hi, John Doe!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextLoc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="Location: Longitude,Latitude OR City"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:onClick="getWeatherData"
+        android:text="Get Weather Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLoc" />
+
+    <TextView
+        android:id="@+id/tv_TodaysWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="18dp"
+        android:text="Today's Weather:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWeather" />
+
+    <TextView
+        android:id="@+id/tv_Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="@+id/tv_TodaysWeather"
+        app:layout_constraintTop_toBottomOf="@+id/tv_TodaysWeather" />
+
+    <TextView
+        android:id="@+id/tv_Temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Temperature"
+        app:layout_constraintStart_toStartOf="@+id/tv_FeelsLike"
+        app:layout_constraintTop_toBottomOf="@+id/tv_FeelsLike" />
+
+    <TextView
+        android:id="@+id/tv_FeelsLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="FeelsLike"
+        app:layout_constraintStart_toStartOf="@+id/tv_Description"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Description" />
+
+    <Button
+        android:id="@+id/buttonGoToMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="Movie List"
+        android:onClick="goToMovieActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Temp" />
+
+    <ImageView
+        android:id="@+id/iv_weather"
+        android:layout_width="37dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="185dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_TodaysWeather"
+        app:layout_constraintTop_toTopOf="@+id/tv_TodaysWeather"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
