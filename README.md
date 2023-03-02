@@ -1,0 +1,2 @@
+# Weather/Movie Android App
+This is an Android application that was created to showcase the use of APIs and Asynchronous tasks. After asking for permissions, the program is capable of looking up weather data for a city or long/lat. On the second activity there is a movie list that is downloaded from the top 50 most popular on IMDB using their API. This is downloaded asynchronously off of the UI thread so there is no interuption to the user experience.
